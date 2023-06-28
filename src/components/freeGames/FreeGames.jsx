@@ -103,7 +103,7 @@ const FreeGames = ({ gamesList, selectedOptions, onOptionsChange }) => {
       </div>
 
       {/* {card} */}
-      <section className="px-40 flex justify-center items-center py-3 md:py-10  md:p-20 md:px-0 antialiased">
+      <section className="px-40  flex justify-center items-center py-3 md:py-10  md:p-20 md:px-0 antialiased">
         <section className="grid lg:grid-cols-3 justify-center 2xl:grid-cols-3 items-center  grid-cols gap-10">
           {gamesList &&
             gamesList?.map((item, id) => (

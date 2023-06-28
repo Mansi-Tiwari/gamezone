@@ -33,9 +33,9 @@ const GameData = () => {
           Go back
         </button>
       </div>
-      <div className="flex flex-col items-center justify-center p-3 px-[50px] xl:px-[150px]">
+      <div className="flex flex-col items-center justify-center px-40 xl:px-[150px]">
         <div className="flex xl:flex-row flex-col gap-4 ">
-          <div className="md:w-[340px] xl:w-[370px] w-full ">
+          <div className="md:w-[340px] xl:w-[370px] w-full px-8  ">
             <img
               src={state?.background_image}
               alt={state?.id}
@@ -84,6 +84,22 @@ const GameData = () => {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+        <div className="w-[350px]  md:w-[580px] px-10 xl:w-[900px]">
+          <Slider {...settings}>
+            {state.short_screenshots.length > 2 &&
+              state.short_screenshots.map((item) => (
+                <div className="p-2" key={item.id}>
+                  <img
+                    src={item.image}
+                    alt={item.id}
+                    key={item.id}
+                    className=" h-[60px] md:h-[160px]"
+                  />
+                </div>
+              ))}
+          </Slider>
             <div className="flex flex-wrap gap-4 my-10 px-3">
               <h2 className="text-white text-2xl">Tags:</h2>
               {state.tags?.map((items) => (
@@ -95,22 +111,6 @@ const GameData = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-        <div className="w-[400px] md:w-[580px] xl:w-[900px]">
-          <Slider {...settings}>
-            {state.short_screenshots.length > 2 &&
-              state.short_screenshots.map((item) => (
-                <div className="p-2" key={item.id}>
-                  <img
-                    src={item.image}
-                    alt={item.id}
-                    key={item.id}
-                    className=" h-[100px] md:h-[160px]"
-                  />
-                </div>
-              ))}
-          </Slider>
         </div>
       </div>
     </>

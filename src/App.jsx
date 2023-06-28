@@ -12,7 +12,6 @@ import {
   FreeGameDetail,
   GameDetail,
 } from "./components/index";
-import "./dist/main.css";
 
 function App() {
   const [gamesList, setGamesList] = useState("");

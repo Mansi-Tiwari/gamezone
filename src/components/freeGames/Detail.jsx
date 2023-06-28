@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Loader from "../loader/Loader";
 
 const Detail = ({ game }) => {
-
   if (!game) {
     return <Loader />;
   }
@@ -22,7 +21,8 @@ const Detail = ({ game }) => {
               Status
             </p>
             <div className="flex gap-2 text-white flex-row items-center justify-center">
-              <img src={eye} alt="" className="h-4 w-4 " />&nbsp;
+              <img src={eye} alt="" className="h-4 w-4 " />
+              &nbsp;
               {game.status}
             </div>
           </div>

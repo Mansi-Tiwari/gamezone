@@ -42,10 +42,10 @@ const GameDetail = () => {
             Go back
           </button>
         </div>
-        <div className="flex xl:flex-row flex-col justify-between xl:px-20 px-1 ">
+        <div className="flex xl:flex-row gap-10 flex-col xl:px-20 px-10 ">
           <div className=" w-full xl:w-[45%]">
             <GameSlider Game={screenshot} />
-            <div className="flex flex-wrap gap-4 mt-8 md:mb-[200px] px-3">
+            <div className="flex flex-wrap gap-4 mt-8 md:mb-[100px] px-3">
               <h2 className="text-white text-2xl">Tags:</h2>
               {singleGame?.tags?.map((items) => (
                 <div
@@ -58,8 +58,7 @@ const GameDetail = () => {
             </div>
           </div>
 
-            <SingleGame game={singleGame} />
-
+          <SingleGame game={singleGame} />
         </div>
       </div>
     </>
