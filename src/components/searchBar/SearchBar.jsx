@@ -6,16 +6,11 @@ import "./SearchBar.css";
 const SearchBar = ({ setOpen }) => {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
-
   const searchQueryHandler = (event) => {
     if (event.key === "Enter" && query.length > 0) {
       setOpen(false);
       setQuery("")
       navigate(`/search/${query}`);
-      setTimeout(() => {
-        setShowSearch(false);
-      }, 1000);
-    }
   };
 
   const searchQueryOnClick = () => {
@@ -24,10 +19,6 @@ const SearchBar = ({ setOpen }) => {
       setOpen(false);
       setQuery("")
       navigate(`/search/${query}`);
-      setTimeout(() => {
-        setShowSearch(false);
-      }, 1000);
-    }
   };
   return (
     <div className="search-bar-container">
