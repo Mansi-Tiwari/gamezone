@@ -1,5 +1,4 @@
 import { useEffect, useState ,useLayoutEffect } from "react";
-import SearchResultsList from "./components/searchBar/SearchResultsList";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import axios from "axios";
 import {
