@@ -10,8 +10,9 @@ const GameSlider = ({ games }) => {
     autoplay: true,
     speed: 1000,
     responsive: [
+
       {
-        breakpoint: 1024,
+        breakpoint: 1400,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
@@ -19,7 +20,7 @@ const GameSlider = ({ games }) => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -50,7 +51,7 @@ const GameSlider = ({ games }) => {
             games.map((item) => (
               <Link to={`/detail/${item.id}`} key={item.id}>
                 <div
-                  className="xl:w-[400px] xl:h-[250px] lg:w-[260px] lg:h-[200px] md:w-[280px] md:h-[150px] slider-item img-fit-cover px-3"
+                  className="w-full  slider-item img-fit-cover px-1"
                   key={item.name}
                 >
                   <img src={item?.thumbnail} className="slider-item-img" />
