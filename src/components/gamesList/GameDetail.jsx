@@ -42,7 +42,7 @@ const GameDetail = () => {
             Go back
           </button>
         </div>
-        <div className="flex xl:flex-row gap-10 flex-col xl:px-20 px-10 ">
+        <div className="flex xl:flex-row gap-10 flex-col xl:px-20 px-1 ">
           <div className=" w-full xl:w-[45%]">
             <GameSlider Game={screenshot} />
             <div className="flex flex-wrap gap-4 mt-8 md:mb-[100px] px-3">

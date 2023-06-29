@@ -28,9 +28,9 @@ const LatestGame = () => {
           genreId={(genreId) => getGameListByGenresId(genreId)}
           selectedGenresName={(name) => setSelctedGenresName(name)}
         />
-        <div className="flex flex-col mt-40">
+        <div className="flex flex-col mt-20">
           <div className="mb-7 ml-4">
-            <h1 className=" text-white font-bold text-4xl">
+            <h1 className=" text-white font-bold text-2xl md:text-4xl">
               {selctedGenresName}
               <span className="text-pink-600">Games</span>
             </h1>

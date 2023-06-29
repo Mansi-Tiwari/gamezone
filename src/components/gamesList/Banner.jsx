@@ -6,7 +6,7 @@ const Banner = () => {
       <div className="flex md:flex-row flex-col ">
         <div className=" grow ease-all duration-300 rounded-none relative mt-5 hover:-translate-y-2 ">
           <div
-            className=" absolute bottom-0 p-5 bg-gradient-to-t
+            className=" absolute  bottom-0 md:p-5 bg-gradient-to-t
     from-slate-900 to-transparent w-full flex justify-between items-center"
           >
             <div className="flex flex-col">

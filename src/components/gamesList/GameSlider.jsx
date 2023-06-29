@@ -21,7 +21,7 @@ const GameSlider = ({ Game }) => {
           Game.map((item) => (
             <img
               src={item.image}
-              className="p-2 mb-3 rounded-md"
+              className="  rounded-md"
               alt={item.id}
               key={item.id}
             />
@@ -40,7 +40,7 @@ const GameSlider = ({ Game }) => {
           Game.map((item) => (
             <img
               src={item.image}
-              className="p-2 md:h-[150px] h-[100px] rounded-md"
+              className="p-1"
               alt={item.id}
               key={item.id}
             />

@@ -8,7 +8,7 @@ const GameSlider = ({ games }) => {
     slidesToShow: 4,
     slidesToScroll: 2,
     autoplay: true,
-    speed: 6000,
+    speed: 1000,
     responsive: [
       {
         breakpoint: 1024,

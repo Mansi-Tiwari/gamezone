@@ -45,11 +45,11 @@ const FreeGameDetail = () => {
             Go back
           </button>
         </div>
-        <div className="flex xl:flex-row flex-col gap-10 items-center xl:px-20  px-1  mt-3 ">
+        <div className="flex xl:flex-row flex-col gap-10 xl:px-20  px-1  mt-3 ">
           <div className=" w-full  xl:w-[55%] ">
             <GameSlider Game={singleData} />
           </div>
-          <div className=" w-[90%]  xl:w-[600px] items-center mb-6 ">
+          <div className="mb-6 px-20 md:px-6">
             <Detail game={singleData} />
           </div>
         </div>

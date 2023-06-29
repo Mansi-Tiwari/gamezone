@@ -7,4 +7,5 @@ export { default as FreeGameDetail } from "../components/freeGames/FreeGameDetai
 export { default as GameDetail } from "../components/gamesList/GameDetail";
 export { default as LatestGame } from "../components/gamesList/LatestGame";
 export { default as GameData } from "../components/searchBar/GameData";
+export{default as  SearchResultsList} from "../components/searchBar/SearchResultsList";
 

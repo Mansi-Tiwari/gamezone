@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useEffect, useState ,useLayoutEffect } from "react";
+import SearchResultsList from "./components/searchBar/SearchResultsList";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import axios from "axios";
 import {
   LatestGame,
@@ -11,6 +12,7 @@ import {
   Stores,
   FreeGameDetail,
   GameDetail,
+  SearchResultsList,
 } from "./components/index";
 
 function App() {
@@ -20,6 +22,14 @@ function App() {
     tag: "shooter",
     sorted: "popularity",
   });
+
+  const Wrapper = ({ children }) => {
+    const location = useLocation();
+    useLayoutEffect(() => {
+      document.documentElement.scrollTo(0, 0);
+    }, [location.pathname]);
+    return children;
+  };
 
   const handleOptionsChange = (options) => {
     setSelectedOptions(options);
@@ -53,38 +63,41 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header path="/" element={<Header />} />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Home
-                gamesList={gamesList}
-                selectedOptions={selectedOptions}
-                onOptionsChange={handleOptionsChange}
-              />
-            }
-          />
-          <Route path="/game" element={<LatestGame />} />
-          <Route path="/gameDetail/:gameId" element={<GameDetail />} />
-          <Route path="/game/:id" element={<GameData />} />
+        <Wrapper>
+          <Header path="/" element={<Header />} />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Home
+                  gamesList={gamesList}
+                  selectedOptions={selectedOptions}
+                  onOptionsChange={handleOptionsChange}
+                />
+              }
+            />
+            <Route path="/game" element={<LatestGame />} />
+            <Route path="/gameDetail/:gameId" element={<GameDetail />} />
+            <Route path="/game/:id" element={<GameData />} />
+            <Route path="/search/:query" element={<SearchResultsList />} />
+            <Route path="/store" element={<Stores />} />
+            <Route
+              path="/games"
+              element={
+                <FreeGames
+                  gamesList={gamesList}
+                  selectedOptions={selectedOptions}
+                  onOptionsChange={handleOptionsChange}
+                />
+              }
+            />
+            <Route path="/detail/:ID" element={<FreeGameDetail />} />
+          </Routes>
 
-          <Route path="/store" element={<Stores />} />
-          <Route
-            path="/games"
-            element={
-              <FreeGames
-                gamesList={gamesList}
-                selectedOptions={selectedOptions}
-                onOptionsChange={handleOptionsChange}
-              />
-            }
-          />
-          <Route path="/detail/:ID" element={<FreeGameDetail />} />
-        </Routes>
-        <footer className=" bg-violet-darker ">
-          <Footer />
-        </footer>
+          <footer className=" bg-violet-darker ">
+            <Footer />
+          </footer>
+        </Wrapper>
       </BrowserRouter>
     </>
   );
