@@ -45,18 +45,18 @@ If you're interested in contributing to the development of the GAMEZONE website,
 1. Clone the GitHub repository: https://github.com/Mansi-Tiwari/gamezone.git
 
 2. Install the necessary dependencies: `npm install`
-3. 
-4. Start the development server: `npm run dev`
+ 
+3.  Start the development server: `npm run dev`
 
-5. Open your web browser and navigate to `http://127.0.0.1:5173/` to access the website.
+4. Open your web browser and navigate to `http://127.0.0.1:5173/` to access the website.
 
 ## Feedback and Support
 
-If you have any feedback, suggestions, or issues regarding the CGame website, please feel free to [open an issue]([https://github.com/Mansi-Tiwari/gamezone/issues) in the GitHub repository. We appreciate your input and will do our best to address any concerns.
+If you have any feedback, suggestions, or issues regarding the GameZone website, please feel free to [open an issue]([https://github.com/Mansi-Tiwari/gamezone/issues) in the GitHub repository. We appreciate your input and will do our best to address any concerns.
 
 ## License
 
-The CGame website is released under the [MIT License](https://opensource.org/licenses/MIT).
+The GameZone website is released under the [MIT License](https://opensource.org/licenses/MIT).
 
 
 
